@@ -126,12 +126,18 @@ namespace Library.Migrations
                     b.Property<bool>("Barrow")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("BarrowDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("GenreId")
                         .HasColumnType("int");
 
                     b.Property<string>("Isbn")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaxBarrowTime")
+                        .HasColumnType("int");
 
                     b.Property<int>("PubhlisherId")
                         .HasColumnType("int");

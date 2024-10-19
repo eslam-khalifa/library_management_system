@@ -29,7 +29,13 @@ namespace Library.Repositories.Implementation
         {
             try
             {
-                var data = context.Book.SingleOrDefault(b => b.Id == id).Barrow = true;
+                var data = context.Book.SingleOrDefault(b => b.Id == id);
+                if (data.Barrow && DateTime.Now.Day>data.BarrowDate.Day + data.MaxBarrowTime ) 
+                {
+                    Console.WriteLine(" penalties for late returns");
+                }
+                data.Barrow= ! data.Barrow;
+
 
                 context.SaveChanges();
                 return true;
