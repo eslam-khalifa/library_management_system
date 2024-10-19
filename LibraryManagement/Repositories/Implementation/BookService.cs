@@ -31,10 +31,12 @@ namespace Library.Repositories.Implementation
             try
             {
                 var data = context.Book.SingleOrDefault(b => b.Id == id);
-                if (data.Barrow && DateTime.Now.Day>data.BarrowDate.Day + data.MaxBarrowTime ) 
+                if (!data.Barrow) { data.BarrowDate = DateTime.Now; }
+                else if (DateTime.Now.Day > data.BarrowDate.Day + data.MaxBarrowTime)
                 {
                     Console.WriteLine(" penalties for late returns");
                 }
+                
                 data.Barrow= ! data.Barrow;
 
 

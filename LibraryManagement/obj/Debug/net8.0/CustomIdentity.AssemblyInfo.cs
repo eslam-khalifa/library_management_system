@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CustomIdentity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d639c31c38b11b9373ec05b15ac222325356a760")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97d8426c3917488f953aee9ae980e69cd80c72b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CustomIdentity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CustomIdentity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

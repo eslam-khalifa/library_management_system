@@ -120,6 +120,9 @@ namespace Library.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("AddTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
