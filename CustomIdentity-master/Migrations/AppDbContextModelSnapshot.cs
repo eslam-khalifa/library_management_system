@@ -123,6 +123,9 @@ namespace Library.Migrations
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Barrow")
+                        .HasColumnType("bit");
+
                     b.Property<int>("GenreId")
                         .HasColumnType("int");
 

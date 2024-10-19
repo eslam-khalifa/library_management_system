@@ -12,7 +12,7 @@
         <div class="col-md-12">
             <h3>Books</h3>
 
-            <table  class="table table-stripped table-bordered table-dark">
+            <table class="table table-stripped table-bordered table-dark">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -25,19 +25,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach(var item in Model){
-                    <tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
                             <td>@item.Title</td>
                             <td>@item.GenreName</td>
                             <td>@item.Isbn</td>
                             <td>@item.TotalPages</td>
                             <td>@item.AuthorName</td>
                             <td>@item.PublisherName</td>
-                        <td>
+                            <td>
                                 <a class="btn btn-success" href="/Book/Update?id=@item.Id"><i class="bi bi-pen"></i></a> |
+
+                                <a class="btn btn-success" href="/Book/Barrow?id=@item.Id"><i class="bi bi-arrow-right"></i></a> |
+
                                 <a class="btn btn-danger" onclick="return window.confirm('Are you sure?')" href="/Book/Delete?id=@item.Id"><i class="bi bi-trash"></i></a>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>

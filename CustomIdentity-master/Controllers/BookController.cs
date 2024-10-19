@@ -11,7 +11,7 @@ namespace Library.Controllers
         private readonly IAuthorService authorService;
         private readonly IGenreService genreService;
         private readonly IPublisherService publisherService;
-        public BookController(IBookService bookService, IGenreService genreService, IPublisherService publisherService,IAuthorService authorService)
+        public BookController(IBookService bookService, IGenreService genreService, IPublisherService publisherService, IAuthorService authorService)
         {
             this.bookService = bookService;
             this.genreService = genreService;
@@ -30,9 +30,9 @@ namespace Library.Controllers
         [HttpPost]
         public IActionResult Add(Book model)
         {
-            model.AuthorList = authorService.GetAll().Select(a => new SelectListItem { Text = a.AuthorName, Value = a.Id.ToString(),Selected=a.Id==model.AuthorId}).ToList();
-            model.PublisherList = publisherService.GetAll().Select(a => new SelectListItem { Text = a.PublisherName, Value = a.Id.ToString(),Selected=a.Id==model.PubhlisherId }).ToList();
-            model.GenreList = genreService.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(),Selected=a.Id==model.GenreId }).ToList();
+            model.AuthorList = authorService.GetAll().Select(a => new SelectListItem { Text = a.AuthorName, Value = a.Id.ToString(), Selected = a.Id == model.AuthorId }).ToList();
+            model.PublisherList = publisherService.GetAll().Select(a => new SelectListItem { Text = a.PublisherName, Value = a.Id.ToString(), Selected = a.Id == model.PubhlisherId }).ToList();
+            model.GenreList = genreService.GetAll().Select(a => new SelectListItem { Text = a.Name, Value = a.Id.ToString(), Selected = a.Id == model.GenreId }).ToList();
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -83,7 +83,12 @@ namespace Library.Controllers
             var result = bookService.Delete(id);
             return RedirectToAction("GetAll");
         }
+        public IActionResult Barrow(int id)
+        {
 
+            var result = bookService.Barrow(id);
+            return RedirectToAction("GetAll");
+        }
         public IActionResult GetAll()
         {
 

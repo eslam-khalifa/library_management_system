@@ -25,6 +25,23 @@ namespace Library.Repositories.Implementation
             }
         }
 
+        public bool Barrow(int id)
+        {
+            try
+            {
+                var data = context.Book.SingleOrDefault(b => b.Id == id).Barrow = true;
+
+                context.SaveChanges();
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public bool Delete(int id)
         {
             try

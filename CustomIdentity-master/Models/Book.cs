@@ -23,18 +23,20 @@ namespace Library.Models.Domain
         public int GenreId { get; set; }
 
         [NotMapped]
-        public string ? AuthorName { get; set; }
+        public string? AuthorName { get; set; }
         [NotMapped]
-        public string ? PublisherName { get; set; }
+        public string? PublisherName { get; set; }
         [NotMapped]
-        public string ? GenreName { get; set; }
+        public string? GenreName { get; set; }
 
         [NotMapped]
-        public List<SelectListItem> ? AuthorList { get; set; }
+        public List<SelectListItem>? AuthorList { get; set; }
         [NotMapped]
         public List<SelectListItem>? PublisherList { get; set; }
         [NotMapped]
-        public List<SelectListItem> ? GenreList { get; set; }
+        public List<SelectListItem>? GenreList { get; set; }
+
+        public bool Barrow { get; set; } = false;
 
     }
 }
