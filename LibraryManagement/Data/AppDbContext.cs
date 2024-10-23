@@ -15,4 +15,10 @@ public class AppDbContext : IdentityDbContext<AppUser>
     public DbSet<Author> Author { get; set; }
     public DbSet<Publisher> Publisher { get; set; }
     public DbSet<Book> Book { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        
+        base.OnModelCreating(builder);
+    }
 }

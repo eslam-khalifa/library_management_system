@@ -38,7 +38,7 @@ namespace Library.Models.Domain
 
         public bool Barrow { get; set; } = false;
 
-        public DateTime AddTime { get; set; } = DateTime.Now;
+        public DateTime AddingDate { get; set; } 
         public DateTime BarrowDate { get; set; } 
         public int MaxBarrowTime { get; set; }
 

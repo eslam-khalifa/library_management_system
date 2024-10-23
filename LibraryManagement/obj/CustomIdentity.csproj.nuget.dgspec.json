@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Depi_project\\LibraryManagementSystem-main\\LibraryManagementSystem-main\\LibraryManagement\\CustomIdentity.csproj": {}
+    "D:\\LibraryFinial-main\\LibraryFinial-main\\LibraryManagement\\CustomIdentity.csproj": {}
   },
   "projects": {
-    "D:\\Depi_project\\LibraryManagementSystem-main\\LibraryManagementSystem-main\\LibraryManagement\\CustomIdentity.csproj": {
+    "D:\\LibraryFinial-main\\LibraryFinial-main\\LibraryManagement\\CustomIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Depi_project\\LibraryManagementSystem-main\\LibraryManagementSystem-main\\LibraryManagement\\CustomIdentity.csproj",
+        "projectUniqueName": "D:\\LibraryFinial-main\\LibraryFinial-main\\LibraryManagement\\CustomIdentity.csproj",
         "projectName": "CustomIdentity",
-        "projectPath": "D:\\Depi_project\\LibraryManagementSystem-main\\LibraryManagementSystem-main\\LibraryManagement\\CustomIdentity.csproj",
+        "projectPath": "D:\\LibraryFinial-main\\LibraryFinial-main\\LibraryManagement\\CustomIdentity.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Depi_project\\LibraryManagementSystem-main\\LibraryManagementSystem-main\\LibraryManagement\\obj\\",
+        "outputPath": "D:\\LibraryFinial-main\\LibraryFinial-main\\LibraryManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

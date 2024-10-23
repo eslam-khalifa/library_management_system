@@ -1,5 +1,5 @@
-﻿using Library.Models;
-using Library.ViewModels;
+﻿using CustomIdentity.ViewModels;
+using Library.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -41,9 +41,9 @@ public class AccountController(SignInManager<AppUser> signInManager, UserManager
     }
 
     [HttpPost]
-    public async Task<IActionResult> Register(RegisterVM model, string? returnUrl = null)
+    public async Task<IActionResult> Register(RegisterVM model)
     {
-        ViewData["ReturnUrl"] = returnUrl;
+        string? returnUrl = Url.Action("GetAll", "Book");
         if (ModelState.IsValid)
         {
             AppUser user = new()
@@ -80,6 +80,6 @@ public class AccountController(SignInManager<AppUser> signInManager, UserManager
     {
         return !string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl)
             ? Redirect(returnUrl)
-            : RedirectToAction(nameof(HomeController.Index), nameof(HomeController));
+            : RedirectToAction(nameof(BookController.GetAll), nameof(BookController));
     }
 }

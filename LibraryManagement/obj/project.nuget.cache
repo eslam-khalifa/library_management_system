@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IxCte3Ujne4=",
+  "dgSpecHash": "eW0mxldtamU=",
   "success": true,
-  "projectFilePath": "D:\\Depi_project\\LibraryManagementSystem-main\\LibraryManagementSystem-main\\LibraryManagement\\CustomIdentity.csproj",
+  "projectFilePath": "D:\\LibraryFinial-main\\LibraryFinial-main\\LibraryManagement\\CustomIdentity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
